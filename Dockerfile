@@ -22,7 +22,7 @@ COPY . .
 
 # Build do frontend
 WORKDIR /usr/src/app/client
-RUN VITE_API_URL=http://bia-alb-1945867359.us-east-1.elb.amazonaws.com npm run build
+RUN VITE_API_URL=https://bia.balestrin.dev npm run build
 
 # Remove dev dependencies do client
 RUN npm prune --production && rm -rf node_modules/.cache
