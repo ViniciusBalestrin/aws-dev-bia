@@ -1,4 +1,6 @@
-FROM public.ecr.aws/docker/library/node:22-slim
+FROM public.ecr.aws/docker/library/node:22.22.1-slim
+RUN npm install -g npm@11 --loglevel=error
+
 
 # Instalar curl
 RUN apt-get update \
